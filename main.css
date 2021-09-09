@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #272727;
+}
+
+nav {
+  background-color: #cc0033;
+  display: flex;
+  border-bottom: solid 30px #a00028;
+}
+
+nav > div{
+  margin: 10px;
+}
+
+#logo{
+  height: 40px;
+  width: 120px;
+  background-color: #303030;
+}
+#searchbar {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: auto;
+  width: 500px;
+  height: 30px;
+  font-size: 16px;
+  background-color: #a00028;
+  border: none;
+}
+#searchbar > input {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+}
+#searchbar > input:focus {
+  outline: none;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  background-image: url('./images/B&W_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom -130px;
+  /* box-shadow: 0px 0 120px 40px black inset; */
+  box-shadow: 100px -20px 120px 0px black inset, 0px 0 8px 4px black inset;
+  height: 450px;
+  color: #ffffff;
+}
+
+header > div{
+  padding: 2.5rem;
+  width: 50%;
+}
+
+#header__text-content > h1 {
+  font-size: 60px;
+}
+
+#header__product-image {
+  background-image: url('./images/PEAK_PNG.png');
+  background-repeat: no-repeat;
+  background-size: 550px;
+  background-position: center right 35px;
+}
+
+main {
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: space-around;
+}
+
+#color-container > div {
+  display: flex;
+  border: solid 10px #ffffff;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 200;
+  position: relative;
+  top: -50px;
+  
+  height: 220px;
+  width: 450px;
+
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px gray;
+}
+
+#color-container > #color_green {
+  background-color: #35D3B4;
+}
+#color-container > #color_blue {
+  background-color: #1B2191;  
+}
+#color-container > #color_pink{
+  background-color: #D822EE;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  color: #fefefe;
+}
