@@ -61,10 +61,22 @@ header > div{
   width: 50%;
 }
 
+#header__text-content > * {
+  padding: 5px 0;
+}
+
 #header__text-content > h1 {
   font-size: 60px;
 }
 
+#header__text-content > h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#header__text-content > p {
+  line-height: 25px;
+}
 #header__product-image {
   background-image: url('./images/PEAK_PNG.png');
   background-repeat: no-repeat;
@@ -76,19 +88,22 @@ main {
   background-color: #fcfcfc;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+
 
 #color-container > div {
   display: flex;
-  border: solid 10px #ffffff;
+  border: solid 15px #ffffff;
   color: #ffffff;
   font-size: 40px;
   font-weight: 200;
   position: relative;
   top: -50px;
   
-  height: 220px;
-  width: 450px;
+  height: 250px;
+  width: 560px;
 
   justify-content: center;
   align-items: center;
@@ -107,8 +122,25 @@ main {
   background-color: #D822EE;
 }
 
+@media only screen and (max-width: 1800px) {
+  #color-container > div {
+    position: initial;
+    margin: 40px 0;
+  }
+}
+
 footer {
   display: flex;
   justify-content: space-around;
   color: #fefefe;
+}
+
+footer > div {
+  padding: 4rem;
+}
+
+@media only screen and (max-width: 1800px) {
+  footer {
+    justify-content: center;
+  }
 }
