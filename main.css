@@ -161,7 +161,7 @@ footer ul > li {
 }
 
 /* Tablet media queries */
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1500px) {
   #searchbar {
     width: 50%;
     margin: 0px;
@@ -198,7 +198,7 @@ footer ul > li {
 }
 
 /* Mobile media queries */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 930px) {
   #logo {
     width: 90px;
     margin: 15px;
