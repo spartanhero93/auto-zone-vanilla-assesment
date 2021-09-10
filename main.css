@@ -219,12 +219,13 @@ footer ul > li {
   }
   #header__text-content {
     padding-bottom: 0px;
+    line-height: 25px;
   }
   #header__text-content > h1 {
     font-size: 30px;
   }
   #header__text-content > h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
   /* Hide the second content inside the p on mobile */
   #header__text-content > p > span {
