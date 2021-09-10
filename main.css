@@ -4,23 +4,23 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #272727;
 }
 
 nav {
   background-color: #cc0033;
   display: flex;
-  border-bottom: solid 30px #a00028;
+  border-bottom: solid 50px #a00028;
 }
 
-nav > div{
-  margin: 10px;
+nav > div {
+  margin: 15px;
 }
 
-#logo{
-  height: 40px;
-  width: 120px;
+#logo {
+  height: 60px;
+  width: 180px;
   background-color: #303030;
 }
 #searchbar {
@@ -28,35 +28,41 @@ nav > div{
   align-self: center;
   justify-self: center;
   margin: auto;
-  width: 500px;
-  height: 30px;
+  width: 45%;
   font-size: 16px;
   background-color: #a00028;
   border: none;
+  border-radius: 4px;
 }
 #searchbar > input {
   width: 100%;
+  height: 60px;
   background-color: inherit;
   border: none;
+  font-size: 30px;
+  text-align: center;
 }
 #searchbar > input:focus {
   outline: none;
   color: #ffffff;
+}
+#searchbar > img {
+  align-self: center;
+  padding-right: 15px;
 }
 
 header {
   display: flex;
   background-image: url('./images/B&W_bg.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom -130px;
-  /* box-shadow: 0px 0 120px 40px black inset; */
-  box-shadow: 100px -20px 120px 0px black inset, 0px 0 8px 4px black inset;
+  background-size: 100%;
+  background-position: center bottom -230px;
+  box-shadow: 100px -20px 120px 0px black inset, 20px 0 8px 4px black inset;
   height: 450px;
   color: #ffffff;
 }
 
-header > div{
+header > div {
   padding: 2.5rem;
   width: 50%;
 }
@@ -70,17 +76,19 @@ header > div{
 }
 
 #header__text-content > h2 {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 40px;
+  font-weight: 200;
 }
 
 #header__text-content > p {
-  line-height: 25px;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 300;
 }
 #header__product-image {
   background-image: url('./images/PEAK_PNG.png');
   background-repeat: no-repeat;
-  background-size: 550px;
+  background-size: 650px;
   background-position: center right 35px;
 }
 
@@ -100,26 +108,26 @@ main {
   font-weight: 200;
   position: relative;
   top: -50px;
-  
+
   height: 250px;
   width: 560px;
 
   /* Align text content center */
   justify-content: center;
   align-items: center;
-  
-  border-radius: 5px;
+
+  border-radius: 6px;
   box-shadow: 0 0 10px 1px gray;
 }
 
 #color-container > #color_green {
-  background-color: #35D3B4;
+  background-color: #35d3b4;
 }
 #color-container > #color_blue {
-  background-color: #1B2191;  
+  background-color: #1b2191;
 }
-#color-container > #color_pink{
-  background-color: #D822EE;
+#color-container > #color_pink {
+  background-color: #d822ee;
 }
 /* Hide this until mobile */
 #color-container div:last-of-type {
@@ -133,21 +141,56 @@ main {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   color: #fefefe;
+  line-height: 30px;
 }
 
 footer > div {
-  padding: 10rem;
+  padding: 8rem;
+}
+
+footer ul {
+  font-size: 25px;
+  font-weight: 600;
+  list-style: none;
+}
+footer ul > li {
+  font-size: 15px;
+  font-weight: 300;
 }
 
 /* Tablet media queries */
 @media only screen and (max-width: 1800px) {
+  #searchbar {
+    width: 50%;
+    margin: 0px;
+  }
+  header {
+    height: 400px;
+    background-size: 150%;
+    background-position: center bottom -150px;
+  }
+  #header__product-image {
+    background-size: 500px;
+    background-position: center;
+    position: relative;
+    top: 115px;
+  }
+  #header__text-content > p {
+    font-size: 16px;
+  }
+
   #color-container > div {
-    height: 160px;
-    width: 360px;
+    height: 190px;
+    width: 380px;
     position: initial;
-    margin: 45px;
+    margin: 80px 40px;
+    font-size: 35px;
+  }
+  /* third color container's top margin is smaller on xd sheet */
+  #color-container > div:nth-of-type(3) {
+    margin-top: 0px;
   }
   footer {
     justify-content: center;
@@ -156,12 +199,26 @@ footer > div {
 
 /* Mobile media queries */
 @media only screen and (max-width: 420px) {
+  #logo {
+    width: 90px;
+    margin: 15px;
+  }
+  #searchbar {
+    width: 100%;
+    margin-right: 15px;
+  }
   header {
     display: flex;
     flex-direction: column;
+    background-size: 400%;
+    background-position: bottom -190px right -280px;
+    box-shadow: 0 0 300px 50px black inset;
   }
   header > div {
     width: initial;
+  }
+  #header__text-content {
+    padding-bottom: 0px;
   }
   #header__text-content > h1 {
     font-size: 30px;
@@ -169,7 +226,8 @@ footer > div {
   #header__text-content > h2 {
     font-size: 20px;
   }
-  #header__text-content > p:nth-of-type(2) {
+  /* Hide the second content inside the p on mobile */
+  #header__text-content > p > span {
     display: none;
   }
   #header__product-image {
@@ -203,6 +261,6 @@ footer > div {
     color: #fefefe;
   }
   footer > div {
-    padding-top: 30px;
+    padding: 35px
   }
 }
